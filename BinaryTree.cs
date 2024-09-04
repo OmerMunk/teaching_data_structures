@@ -27,9 +27,23 @@ public class BinaryTree
             node.Right = InsertRecursive(node.Right, value);
         return node;
     }
-
+    
     public bool Find(int value)
     {
-        
+        return FindRecursive(root, value);
     }
+
+    private bool FindRecursive(TreeNode node, int value)
+    {
+        if (node == null)
+            return false;
+        if (node.Value == value)
+            return true;
+        if (value < node.Value)
+            return FindRecursive(node.Left, value);
+        else // value >= node.Value
+            return FindRecursive(node.Right, value);
+    }
+
+
 }
