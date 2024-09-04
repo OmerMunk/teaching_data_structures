@@ -51,3 +51,6 @@ public class Array1
         Console.WriteLine();
     }
 }
+
+
+
