@@ -39,11 +39,29 @@ public class BinaryTree
             return false;
         if (node.Value == value)
             return true;
-        if (value < node.Value)
-            return FindRecursive(node.Left, value);
-        else // value >= node.Value
-            return FindRecursive(node.Right, value);
+        
+        return FindRecursive(
+            value < node.Value ? node.Left : node.Right,
+            value
+            );
     }
+
+    public int? getMin()
+    {
+        return getMin(root);
+    }
+    
+    private int? getMin(TreeNode node)
+    {
+        if (node == null) return null;
+        while (node.Left != null)
+        {
+            node = node.Left;
+        }
+        return node.Value;
+    }
+    
+    // do the max alone
 
 
 }
