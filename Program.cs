@@ -67,13 +67,39 @@
 // Console.WriteLine(2 >> 1);
 
 
-using data_structures;
+// using data_structures;
+//
+// BinaryTree tree = new BinaryTree();
+// tree.Insert(5);
+// tree.Insert(7);
+// tree.Insert(2);
+// Console.WriteLine("hi");
 
-BinaryTree tree = new BinaryTree();
-tree.Insert(5);
-tree.Insert(7);
-tree.Insert(2);
-Console.WriteLine("hi");
+
+// [      0  1  2
+// 0     [_, _, _]
+// 1     [_, _, _]
+// 2     [_, _, _]
+// ]
+
+char[][] chars = new char[3][];
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        chars[i][j] = '_';
+    }
+}
+
+char player1 = 'X';
+char player2 = 'Y';
+
+bool isWin = false;
+int rounds = 0;
+while (!isWin && rounds <= 9)
+{
+    
+}
 
 
 
